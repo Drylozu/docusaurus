@@ -17,10 +17,10 @@ usage() { echo "Usage: $0 [-n] [-s]" 1>&2; exit 1; }
 while getopts ":ns" o; do
   case "${o}" in
     n)
-      EXTRA_OPTS="--use-npm"
+      EXTRA_OPTS="${EXTRA_OPTS} --use-npm"
       ;;
     s)
-      EXTRA_OPTS="--skip-install"
+      EXTRA_OPTS="${EXTRA_OPTS} --skip-install"
       ;;
     *)
       usage
